@@ -9,7 +9,7 @@ from output_handler.writer import output_file
 
 
 def main():
-    n = 50
+    n = 15
     interval_list = _generate_random_intervals(n)
     if _check_subset(interval_list):
         # 不存在包含关系，则对interval_list重新排序
@@ -26,7 +26,7 @@ def main():
 
 
 def _generate_random_intervals(length: int):
-    temp = [(randint(0, 1000), randint(5, 100)) for _ in range(length)]
+    temp = [(randint(0, 1000), randint(5, 200)) for _ in range(length)]
     return [(a, a + b) for (a, b) in temp]
 
 
